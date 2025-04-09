@@ -30,6 +30,7 @@ Linearize AMR graphs and calculate the relative distance of nodes from the root:
 cd preprocess
 python amr2json.py -src <amr_file> -tgt <amr_file>
 ```
+**Actually, you can just use 'python amr2json.py' with default values for -src, -tgt, etc.**
 
 ### Returning Similarity with pre-trained model
 
@@ -37,9 +38,10 @@ Download the model from [Google drive](https://drive.google.com/file/d/1klTrvv3h
 unzip to the output directory (/sentence-transformers/output/).
 
 ```
-cd sentence_transformers
+cd sentence-transformers
 python test_amrsim.py
 ```
+**Please note that there is a 'sentence_transformers' folder -- which appears to be redundant - nested in the 'sentence-transformers'. It is the latter to be used in the above cd command; oterhwise, the actual python command will fail to find the referenced files, eg, that in ../data.** 
 
 ### Training a Similarity model from scratch
 Following data preparation in AMR-DA (Shou et al., 2022), AMRSim utilized SPRING (Bevilacqua et al., 2021) to parse [one-million sentences](https://huggingface.co/datasets/princeton-nlp/datasets-for-simcse/tree/main) randomly sampled from English Wikipedia2 to AMR graphs. 
