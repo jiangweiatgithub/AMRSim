@@ -29,15 +29,19 @@ Linearize AMR graphs and calculate the relative distance of nodes from the root:
 ```
 cd preprocess
 python amr2json.py -src <amr_file> -tgt <amr_file>
+or
+python amr2json.py
+(for default values)
 ```
 
 ### Returning Similarity with pre-trained model
 
 Download the model from [Google drive](https://drive.google.com/file/d/1klTrvv3hpIPxaCoMbRI7IJDme-Vq3UPS/view?usp=share_link) and
-unzip to the output directory (/sentence-transformers/output/).
+unzip the files and subfolders of the model into the output directory (/sentence-transformers/output/ct-wiki-bert). It will look something like below screenshot on Windows:
+![image](https://github.com/user-attachments/assets/8043d690-4315-415c-9b16-06d12c5d0a4d)
 
 ```
-cd sentence_transformers
+cd sentence-transformers
 python test_amrsim.py
 ```
 
