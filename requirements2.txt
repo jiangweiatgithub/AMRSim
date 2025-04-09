@@ -1,0 +1,9 @@
+numpy
+torch
+torch_geometric
+torch_sparse
+transformers
+networkx
+unidecode
+nltk
+torch_scatter
